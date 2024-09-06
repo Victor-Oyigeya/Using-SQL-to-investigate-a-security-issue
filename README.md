@@ -1,7 +1,7 @@
 # Using-SQL-to-investigate-a-security-issue
 
 ## Project description
-[I used SQL to filter data to retrieve records of employee machines and login attempts from the database to investigate a security issue. I applied the WHERE, LIKE, AND, OR, and NOT filters for this activity.]
+[I used SQL to filter data to retrieve records of employee machines and login attempts from a database to investigate a security issue. I applied the WHERE, LIKE, AND, OR, and NOT filters for this activity.]
 
 ## Environment/Labs used
 - Linux
@@ -18,7 +18,7 @@
 ![Screenshot 2024-09-05 011830](https://github.com/user-attachments/assets/d39a49da-405d-4f31-8a70-dcff723f6a81)
 
 
-The query above will display a list of failed login attempts after business hours. In the first line, Select indicates which column to return from a table and * means select all columns. The second line, From indicates the table to query, in this case,  log_in_attempts. In the third line, Where is for filtering columns for strings of data, login_time and success is the column we are filtering.  The > operator in the query will filter for login_time after ‘18:00’, and the success column for login attempts results. success = 0 means we are filtering for false [failed] login. 0 means false [failed], while 1 means true [successful]. ]
+The query above will display a list of failed login attempts after business hours. In the first line, Select indicates which column to return from a table and * means select all columns. The second line, From indicates the table to query, in this case,  log_in_attempts. In the third line, the WHERE clause with an AND operator is used for filtering columns for strings of data, login_time and success is the column we are filtering.  The > operator in the query will filter for login_time after ‘18:00’, and the = operator filters the success column for failed login attempts results. success = 0 means we are filtering for false [failed] login. 0 means false [failed], while 1 means true [successful]. ]
 
 ### Retrieve login attempts on specific dates
 
