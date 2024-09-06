@@ -18,7 +18,7 @@
 ![Screenshot 2024-09-05 011830](https://github.com/user-attachments/assets/d39a49da-405d-4f31-8a70-dcff723f6a81)
 
 
-The query above will display a list of failed login attempts after business hours. In the first line, Select indicates which column to return from a table and * means select all columns. The second line, From indicates the table to query, in this case,  log_in_attempts. In the third line, the WHERE clause with an AND operator is used for filtering columns for strings of data, login_time and success is the column we are filtering.  The > operator in the query will filter for login_time after ‘18:00’, and the = operator filters the success column for failed login attempts results. success = 0 means we are filtering for false [failed] login. 0 means false [failed], while 1 means true [successful]. ]
+The query above will display a list of failed login attempts after business hours. In the first line, SELECT indicates which column to return from a table and * means all columns. The second line, FROM indicates the table to query, in this case,  log_in_attempts. In the third line, the WHERE clause with an AND operator is used for filtering columns for strings of data, login_time and success is the column we are filtering.  The > operator in the query will filter for login_time after ‘18:00’, and the = operator filters the success column for failed login attempts results. <b>success = 0</b> means we are filtering for false [failed] login. 0 means false [failed], while 1 means true [successful]. ]
 
 ### Retrieve login attempts on specific dates
 
@@ -26,10 +26,10 @@ The query above will display a list of failed login attempts after business hour
 ![Screenshot 2024-09-05 013621](https://github.com/user-attachments/assets/fd45102a-b01e-4a5c-a1e0-6510682f8362)
 
 
-The first line indicates to select all columns on the table. Second line indicates the table to query from . The third line will retrieve login dates for either 8th may, 2022 or 9th may, 2022. OR specifies that either conditions can be met. ]
+The first line indicates to select all columns on the table. Second line indicates the table to query from . In the third line, the WHERE clause and OR operator will filter the login_date column to retrieve login dates for either 8th may, 2022 or 9th may, 2022. ]
 
 ### Retrieve login attempts outside of Mexico
-[The team confirmed that mexico was not a country that this suspicious login attempts originated from. With that information, we had to filter out mexico from the data being returned. We ran this query:
+[The team confirmed that mexico was not a country that had failed login attempts. With that information, we had to filter out mexico from the data being returned. To do that, we ran this query:
 ![Screenshot 2024-09-05 013958](https://github.com/user-attachments/assets/90f6f38b-33c1-4091-8432-ea28c92745f9)
 
 In the query, the first line indicates to select all columns on the table. The second line indicates to return information from the ‘login_in_ attempts’ table. The third line is a filter that indicates the country not to include in the output, which is Mexico in this case. I used LIKE with 'mex%' as the pattern to match because the dataset represents Mexico as 'mex' and 'MEXICO'. In  ‘mex%’, the percentage sign substitutes for any number of other characters after ‘mex’. ]
@@ -40,7 +40,7 @@ Firstly, we’ll retrieve all the columns in the employees table by running this
 ![Screenshot 2024-09-05 014326](https://github.com/user-attachments/assets/b995a350-132f-4c4c-a342-6381d83da063)
 
 
-We discover that they are a lot of data to read through to get the specific information we need, so we'll filter this information by running this query:
+We discovered that they are a lot of data to read through to get the specific information we need, so we'll filter this information by running this query:
 
 ![Screenshot 2024-09-05 014846](https://github.com/user-attachments/assets/61b7ab88-b30e-431b-91ec-24c4f6bfd102)
 
